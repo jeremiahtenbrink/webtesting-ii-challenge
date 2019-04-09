@@ -19,6 +19,11 @@ class App extends Component {
     };
     
     handleBall = () => {
+        
+        if ( this.state.balls > 3 ) {
+            this.setState( { balls: 0, strikes: 0 } );
+        }
+        
         if ( this.state.strikes < 2 ) {
             this.setState( state => ( {
                 strikes: state.strikes + 1,
@@ -42,7 +47,7 @@ class App extends Component {
                              strikes={ this.state.strikes }/>
                     <Dashboard handleStrike={ this.handleStrike }
                                handleBall={ this.handleBall }
-                                handleHit={this.handleHit}
+                               handleHit={ this.handleHit }
                     />
                 </header>
             

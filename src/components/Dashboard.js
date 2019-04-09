@@ -6,14 +6,14 @@ const Dashboard = props => {
         <Row className={ "dashboard" }>
             <Col sm={ 12 } md={ { size: 2, offset: 2 } }
                  className={ "balls-btn" }>
-                <Button onClick={ props.handleBall }>Ball</Button>
+                <Button data-testid='ball' onClick={ props.handleBall }>Ball</Button>
             </Col>
             <Col sm={ 12 } md={ { size: 2, offset: 2 } }
                  className={ "strikes-btn" }>
-                <Button onClick={ props.handleStrike }>Strike</Button>
+                <Button data-testid='strike' onClick={ props.handleStrike }>Strike</Button>
             </Col>
             <Col sm={ 12 } md={ { size: 2, offset: 2 } }>
-                <Button onClick={ props.handleHit }>Hit</Button>
+                <Button data-testid='hit' onClick={ props.handleHit }>Hit</Button>
             </Col>
         </Row>
     );
